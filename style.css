@@ -17,17 +17,17 @@ color: black;
     align-items: center;
     text-align: center;
     color: #1fdcdc;
-    padding: 0%;
+    padding: 0;
     background-color: #2f5f4f;
 }
-body {
-    background-image:url(../marvin-meyer-SYTO3xs06fU-unsplash.jpg)
-}
+/*body {*/
+/*    background-image:url(.marvin-meyer-SYTO3xs06fU-unsplash.jpg);*/
+/*}*/
 #question-holder {
     background-color: #2f5f4f;
     color: white;
     text-align: center;
-};
+}
 
 #buttons{
     padding: 10px;
@@ -36,5 +36,5 @@ body {
 
 }
 #userScore{
-    font-size: 20 px;
+    font-size: 1.5em;
 }
