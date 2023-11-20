@@ -50,40 +50,50 @@ startBtn.addEventListener('click', startQuiz);
 //main function
 //
 function startTimer(duration, display) {
-    timer  = duration;
-    let remainingTime = duration;
-    let seconds;
-    // let seconds= parseInt(timer);
-
-     // displayTime = displayTimer;
-     let interval = setInterval(function () {
-        seconds = parseInt(timer);
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-    // displayTime.textContent= seconds;
-        // window.onload = function() {
-        //     //The countdown timer display
-        //
-        //     displayTimer.textContent="oks";
-        // }
-
-
-
-
-        if (timer > 0) {
-            displayTimer.textContent = timer + " Seconds Remain";
-            timer.innerHTML = timer;
-        }
-        if (timer < 0) {
-            clearInterval(interval);
-            displayTimer.textContent = "TIME UP!";
-            displayScoringScreen();
-        }
-        remainingTime -= 1;
+    // timer  = duration;
+    // let remainingTime = duration;
+    // let seconds;
+    // // let seconds= parseInt(timer);
+    //
+    //  // displayTime = displayTimer;
+    //  let interval = setInterval(function () {
+    //     seconds = parseInt(timer);
+    //     seconds = seconds < 10 ? "0" + seconds : seconds;
+    // // displayTime.textContent= seconds;
+    //     // window.onload = function() {
+    //     //     //The countdown timer display
+    //     //
+    //     //     displayTimer.textContent="oks";
+    //     // }
+    //
+    //
+    //
+    //
+    //     if (timer > 0) {
+    //         displayTimer.textContent = timer + " Seconds Remain";
+    //         timer.innerHTML = timer;
+    //     }
+    //     if (timer < 0) {
+    //         clearInterval(interval);
+    //         displayTimer.textContent = "TIME UP!";
+    //         displayScoringScreen();
+    //     }
+    //     remainingTime -= 1;
         // if (quest === ""){
         //     clearInterval(timer);
         //     document.getElementById("textandquestion").innerHTML = "";
         // }
+    let remainingTime = duration;
+    displayTimer.textContent = remainingTime + " Seconds Remain";
+    interval = setInterval(function () {
+        remainingTime--;
+        displayTimer.textContent = remainingTime + " Seconds Remain";
 
+        if (remainingTime <= 0) {
+            clearInterval(interval);
+            displayTimer.textContent = "TIME UP!";
+            displayScoringScreen();
+        }
 
 
 
@@ -115,6 +125,7 @@ function startQuiz() {
     // displayTimer.style.innerHTML = "";
 
     displayQuestion();
+    // startTimer(30);
 
     // newQuestion();
     // startTimer(timeGiven, displayTimer);
@@ -245,7 +256,7 @@ function checkAnswer(event) {
         // answerIndicatorBox.textContent = "WRONG";
         //add score
         timePenalty();
-        timer -= 5;
+        // timer -= 5;
         if (currentQuestionIndex === questions.length-1 ) {
             clearInterval(timer);
             displayScoringScreen();
@@ -273,19 +284,18 @@ function Score() {
         if (answer == questions[i].correctAnswer) {
             score += 1;
         }
-        if (answer != questions[i].correctAnswer) {
-            timer
+         if (answer != questions[i].correctAnswer && score !== 0)  {
+            score -= 1;
         }
         return score;
     }
 
 
-    if (answer === questions.correctAnswer) {
-        score += 1; // increases scoreCounter by
+
         scoreBoard.textContent = scoreString + score;
 
 
-    }
+
     console.log('Increase Score');
 }
 
