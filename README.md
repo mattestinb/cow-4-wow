@@ -27,8 +27,12 @@ n/a
 This repository is licensed with [None](http://unlicense.org/).
 
 
-## Video  
-[View Demo]()
+## Video  &  Pictures
+![Picture](https://github.com/mattestinb/cow-4-wow/blob/main/04-web-apis-homework-demo.gif)
+(https://github.com/mattestinb/cow-4-wow/blob/main/04-web-apis-homework-demo.gif)
+
+## Links
+[Live Link:](https://mattestinb.github.io/cow-4-wow)
 
 ## Questions 
 If you have any questions, contact me at [mattestin@gmail.com](mailto:mattestin@gmail.com)
