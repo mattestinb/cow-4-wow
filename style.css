@@ -20,15 +20,6 @@ color: black;
     padding: 0;
     background-color: #2f5f4f;
 }
-/*body {*/
-/*    background-image:url(.marvin-meyer-SYTO3xs06fU-unsplash.jpg);*/
-/*}*/
-#question-holder {
-    background-color: #2f5f4f;
-    color: white;
-    text-align: center;
-};
-
 #buttons{
     padding: 10px;
     margin: 5px;
@@ -38,3 +29,12 @@ color: black;
 #userScore{
     font-size: 1.5em;
 }
+/*body {*/
+/*    background-image:url(.marvin-meyer-SYTO3xs06fU-unsplash.jpg);*/
+/*}*/
+#question-holder {
+    background-color: #2f5f4f;
+    color: white;
+    text-align: center;
+}
+
